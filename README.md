@@ -1,6 +1,6 @@
-# Python API Template
+# FastAPI template
 
-🐍 一个**快速高性能**的「Python API 模板」
+🐍 一个**快速高性能**的「FastAPI 模板」
 
 ## 0 快速启动
 
@@ -159,10 +159,10 @@ pip install -r requirements.txt -i https://pypi.mirrors.ustc.edu.cn/simple
 ## 3 容器化部署
 
 ```shell
-cd python-api-template
+cd FastAPI-template
 
 # 直接打包
-docker build -t python-api-template:1.0.0 .
+docker build -t FastAPI-template:1.0.0 .
 # or 使用脚本打包
 bash script/build.sh
 
@@ -172,12 +172,12 @@ docker run -d  --restart=always \
   -p 9999:9999 \
   -v $PWD/conf/:/app/conf \
   -e ENV=prod \
-  python-api-template:1.0.0
+  FastAPI-template:1.0.0
 # or 使用脚本运行
 bash script/run.sh
 
 # 查看
-docker logs -f python-api-template
+docker logs -f FastAPI-template
 
 # 调用 API
 curl --location --request POST 'http://127.0.0.1:9999/test' \
